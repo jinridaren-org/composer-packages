@@ -4,7 +4,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:jinridaren-corp/money-calc.git"
+            "url": "https://github.com/jinridaren-corp/money-calc.git"
         }
     ],
     "require-all": true,
@@ -12,7 +12,7 @@
     "archive": {
         "directory": "dist",
         "format": "zip",
-        "prefix-url": "https://github.com/jinridaren-corp/composer-packages/",
+        "prefix-url": "https://jinridaren-corp.github.io/composer-packages/",
         "skip-dev": false
     },
     "config": {
