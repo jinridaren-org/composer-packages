@@ -14,10 +14,5 @@
         "format": "zip",
         "prefix-url": "https://github.com/jinridaren-corp/composer-packages/",
         "skip-dev": false
-    },
-    "config": {
-        "github-oauth": {
-            "github.com": "GITHUB_TOKEN_PLACEHOLDER"
-        }
     }
 }

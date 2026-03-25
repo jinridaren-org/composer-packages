@@ -29,12 +29,15 @@ jobs:
 
       - name: Install Satis
         run: composer create-project composer/satis:^2.0 --stability=dev --no-dev
-        
-       # 👇👇👇 添加这一行：用真实的 Token 替换占位符 👇👇👇
-      - name: Replace GitHub Token
-        run: sed -i "s/GITHUB_TOKEN_PLACEHOLDER/${{ secrets.GITHUB_TOKEN }}/g" satis.json
-        
+
       - name: Build Satis Repository
+        env:
+          # 通过环境变量向 Composer 注入 GitHub OAuth，避免写入仓库文件
+          # 以便 Composer 在解析私有仓库元数据时携带凭据
+          COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.GITHUB_TOKEN }}"}}'
+          COMPOSER_NO_INTERACTION: 1
+          COMPOSER_NO_AUDIT: 1
+          COMPOSER_PROCESS_TIMEOUT: 0
         run: php satis/bin/satis build satis.json public/
 
       - name: Setup Pages
