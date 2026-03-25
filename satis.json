@@ -1,10 +1,10 @@
 {
-    "name": "jinridaren2024/composer-packages",
-    "homepage": "https://github.com/jinridaren2024/composer-packages/",
+    "name": "jinridaren-corp/composer-packages",
+    "homepage": "https://github.com/jinridaren-corp/composer-packages/",
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/jinridaren2024/money-calc.git"
+            "url": "https://github.com/jinridaren-corp/money-calc.git"
         }
     ],
     "require-all": true,
@@ -12,7 +12,7 @@
     "archive": {
         "directory": "dist",
         "format": "zip",
-        "prefix-url": "https://github.com/jinridaren2024/composer-packages/",
+        "prefix-url": "https://github.com/jinridaren-corp/composer-packages/",
         "skip-dev": false
     },
     "config": {
