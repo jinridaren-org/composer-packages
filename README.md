@@ -90,4 +90,3 @@ composer require jinridaren-org/foo-bar:^1.0
 
 - `Could not find a matching version`：通常是未打 tag，或包名与仓库 `composer.json` 的 `name` 不一致。
 - `packages.json 404`：通常是 Pages 未成功发布，或仓库 URL（`org/corp`）配置不一致。
-
